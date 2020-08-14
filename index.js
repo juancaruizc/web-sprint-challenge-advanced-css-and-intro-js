@@ -217,8 +217,7 @@ function changeName(array) {
   array[8].name = 'Vincent Van Gogh';
   return array;
 }
-
-console.log(changeName([8].name = 'Vincent Van Gogh'))
+console.log(artists[8].name);
 
 /* Task 3: Create a function called `getArtistByIndex` that takes two arguments:
  *     (1) artists array
@@ -229,17 +228,20 @@ console.log(changeName([8].name = 'Vincent Van Gogh'))
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
 function getArtistByIndex(array, index) {
-     return 'The artist at index' + [index] + 'is' + array.name
+  return `The artist at index ${index} is ${array.name}`;
   }
-  
-console.log ()
+
+  console.log (getArtistByIndex[2].name);
+
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-// function get20s(array) {
-//   for (let i = 0; 0 <array.length; i++)
-// }
+function get20s(artists, years); {
+  for (let i = 0; i < artists.length; i++)
+    if (artists[i].years <= 1900 && artists[i].years >= 2000 )
+      newArtists.push(artists[i].name)
+}
 
-
+console.log(newArtists);
 
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
@@ -252,11 +254,12 @@ console.log ()
  * 
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
-function removeArtist(array, index) {
-    /* code here */
+function removeArtist(artists, index) {
+  artists.splice ({index});
+  return array;
   }
   
- 
+ console.log(removeArtists)
 
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
@@ -271,11 +274,17 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(/* Code here */){
-
-    /* Code here */
-
+function addMe(arr, object) {
+id: 20,
+name: "Juan", 
+years: "2001 - 14",
+genre: "Web Design", 
+nationality: "American",
+bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  addMe.push();
   }
+
+  console.log(addMe);
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -285,13 +294,13 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(/* Code here */){
-
-  /* Code here */
-
+function lotsOfArt(artists){
+  for (let i = 0; i < artists.length; i++)
+  if (artists[i].paintings >= 100  )
+    paintings.push(artists[i].name)
 }
 
-
+console.log(lotsOfArt)
 
 // 🎨🎨 STRETCH 🎨🎨//
 
