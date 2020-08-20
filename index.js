@@ -255,12 +255,13 @@ console.log(get20s)
  * Note that sucessfully invoking this function multiple times without refreshing your browser will continuously remove artists from the array until there are none left. If you refresh your browser, the data will reset.  
 */
 
-function removeArtist(arr, index) {
-  arr.splice (
-  return arr;
-  }
+// function removeArtist(arr, index) {
+//   arr.pull ({})
+//   return arr
+//   }
   
- console.log(removeArtist(artists, 0))
+//  console.log(removeArtist(artists, 0))
+//  console.log(artists[i])
 
 /**
 /* Task 6: Create a function called `addArtist` that can accept an object of information and add it to the artists array. Then, add a 21st artist to the array (you) with custom information!👩‍🎨👨‍🎨
@@ -291,21 +292,16 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-// function lotsOfArt(arr) {
-//   for (let i = 0; i < arr.length; i++)
-//   if (arr[i].paintings >= 100)
-//   return paintings.push(arrtits[i].name)
-// }
 
-// console.log(lotsOfArt(artists));
+const lotsOfArt = [] 
+  for (let i = 0; i < artists.length; i++) {
+  if (artists[i].paintings >= 100) {
+  lotsOfArt.push(artists[i].name)
+}
+  }
 
-// function lotsOfArt(artists){
-//   for (let i = 0; i < artists.length; i++)
-//   if (artists[i].paintings >= 100  )
-//     paintings.push(artists[i].name)
-// }
+console.log(lotsOfArt);
 
-// console.log(lotsOfArt)
 
 // 🎨🎨 STRETCH 🎨🎨//
 
