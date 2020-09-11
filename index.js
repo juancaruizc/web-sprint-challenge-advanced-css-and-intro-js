@@ -234,15 +234,18 @@ function getArtistByIndex(array, index) {
 
 /* Task 4: Create a function called get20s() that takes data as an argument and returns an array with names of artists who were born in and died in 20th century (1900-2000) example born in 1901 and died in 1959 - included / born in 1889 and died in 1925 not included - should return ["Salvador Dali", "Frida Kahlo"]*/
 
-function get20s(data){
-  let newArtists = []
-  for(let i = 0; i < artists.length; i++)
-    if(artists[i].years >= '1900' && artists[i].years <= '2000') {
-      newArtists.push(artists[i].name);
-    }
-    console.log(newArtists)
-}
-console.log(get20s())
+  function get20s(arr){
+    let century20 = [];
+    for (let i = 0; i < arr.length; i++){
+      let getYears = arr[i].years.match(/(\d+)/); 
+      if (getYears[0] >= 1900 && getYears[1] <= 2000){
+        century20.push(arr[i].name);
+      };
+    };
+    return century20;
+  };
+
+  console.log(get20s(artists));
 
 /* Task 5: Create a function called `removeArtist` that takes two arguments:
  *     (1) artists array
@@ -274,14 +277,21 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist (arr, id, name, years, genre, nationality, bio) {
-  arr.push({id, name, years, genre, nationality, bio}); 
-  return arr;
+function addArtist(arr) {
+  const newObj = {
+    'id': 20,
+    'name': 'Juan Ruiz', 
+    'years': '2001 - 23',
+    'genre': 'Web Design', 
+    'nationality': 'American',
+    'bio': 'Loem ipsum',
+    }
+    arr.push(newObj);
+    return arr;
 }
-console.log(addArtist(artists, 20, 'Juan Ruiz', '2001 - 11', 'Web Design', 'American', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'))
+console.log(addArtist(artists));
 
-
-//   }
+//
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
